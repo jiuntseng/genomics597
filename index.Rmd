@@ -1,0 +1,15 @@
+---
+title: "index"
+author: "Jiun"
+date: "8/31/2020"
+output: html_document
+bibliography: data/references.bib
+---
+* [lab1](Lab1-Jiun.html)
+
+
+
+
+Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
+
+# REFERENCES
