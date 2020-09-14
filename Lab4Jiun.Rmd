@@ -1,0 +1,82 @@
+---
+title: "Lab4Jiun"
+author: "Jiun"
+date: "9/14/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+#Excercise 1
+#Part 1
+library(tidyverse)
+report_03_11_2020 <-   read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/03-11-2020.csv")) %>%
+  rename(Country_Region = "Country/Region", Province_State = "Province/State")
+str(report_03_11_2020)
+if (!require("DT")) install.packages('DT')
+library(DT)
+datatable(report_03_11_2020)
+report_09_13_2020 <-read_csv(url("https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_daily_reports/09-13-2020.csv"))
+str(report_09_13_2020)
+datatable(report_09_13_2020)
+```
+```{r}
+
+#Part 2
+
+country<-report_03_11_2020%>% group_by(Country_Region)%>%summarise(Deaths = sum(Deaths))
+country2<-report_03_11_2020%>% group_by(Country_Region)%>%summarise(Confirmed = sum(Confirmed))
+country3<-report_09_13_2020%>% group_by(Country_Region)%>%summarise(Deaths = sum(Deaths))
+country4<-report_09_13_2020%>% group_by(Country_Region)%>%summarise(Confirmed = sum(Confirmed))
+```
+
+```{r}
+#Part 3
+US<-report_03_11_2020%>% filter(Country_Region=="US")%>% group_by(Province_State)%>%summarise(Deaths = sum(Deaths))
+summarise(US)
+```
+
+```{r}
+#Part 4
+Deaths<-country%>%arrange(desc(Deaths))%>%slice(1:10)
+Confirmed<-country2%>%arrange(desc(Confirmed))%>%slice(1:10)
+Deaths1<-country3%>%arrange(desc(Deaths))%>%slice(1:10)
+Confirmed1<-country4%>%arrange(desc(Confirmed))%>%slice(1:10)
+```
+
+```{r}
+#Excercise 2
+#Geom_point graph
+#Country~Death03_11_2020
+ggplot(data = Deaths, aes(x = Country_Region , y = Deaths, color = Country_Region)) + geom_point () + 
+  theme(legend.position="none") 
+#Country~confirmed03_11_2020
+ggplot(data = Confirmed, aes(x = Country_Region, y = Confirmed, color = Country_Region)) + geom_point () + 
+  theme(legend.position="none") 
+#Country~Death09_13_2020
+ggplot(data = Deaths1, aes(x = Country_Region , y = Deaths, color = Country_Region)) + geom_point () + 
+  theme(legend.position="none") 
+#Country~Confirmed09_13_2020
+ggplot(data = Confirmed1, aes(x = Country_Region, y = Confirmed, color = Country_Region)) + geom_point () + 
+  theme(legend.position="none") 
+```
+
+```{r}
+#Geom_bar graph
+#Country~Death03_11_2020
+ggplot(data = Deaths, aes(x = Country_Region , y = Deaths, color = Country_Region)) + geom_bar (stat='identity') + 
+  theme(legend.position="none") 
+#Country~confirmed03_11_2020
+ggplot(data = Confirmed, aes(x = Country_Region, y = Confirmed, color = Country_Region)) + geom_bar (stat='identity') + 
+  theme(legend.position="none") 
+#Country~Death09_13_2020
+ggplot(data = Deaths1, aes(x = Country_Region , y = Deaths, color = Country_Region)) +geom_bar (stat='identity') + 
+  theme(legend.position="none") 
+#Country~Confirmed09_13_2020
+ggplot(data = Confirmed1, aes(x = Country_Region, y = Confirmed, color = Country_Region)) + geom_bar (stat='identity') + 
+  theme(legend.position="none") 
+```
+
