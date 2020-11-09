@@ -5,10 +5,14 @@ date: "8/31/2020"
 output: html_document
 bibliography: data/references.bib
 ---
-* [lab1](Lab1-Jiun.html)
-
-
-
+* [lab 1](Lab1-Jiun.html)
+* [lab 2](paper.html)
+* [lab 3](lab-3a-Jiun.html)
+* [lab 4](Lab4Jiun.html)
+* [lab 5](Lab5Jiun.html)
+* [lab 5x ](Lab5XJiun.html)
+* [lab 6](Lab6-Jiun.html)
+* [lab 7](Lab7Vignette.html)
 
 Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
 

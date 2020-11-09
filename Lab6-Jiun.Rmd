@@ -1,5 +1,5 @@
 ---
-title: "Lab6Jiun"
+title: "Lab 6 Jiun"
 author: "Jiun"
 date: "9/28/2020"
 bibliography: /Users/jiuntseng/Documents/Bio 597 GE/genomics597/references.bib

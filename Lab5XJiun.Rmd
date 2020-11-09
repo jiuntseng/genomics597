@@ -42,7 +42,7 @@ time_series_long_joined_counts <- time_series_long_joined %>%
 
 ```{r}
 # Plot graph to a pdf outputfile
-pdf("images/time_series_example_plot.pdf", width=6, height=3)
+pdf("time_series_example_plot.pdf", width=6, height=3)
 time_series_long_joined %>% 
   group_by(Country_Region,Date) %>% 
   summarise_at(c("Confirmed", "Deaths"), sum) %>% 
@@ -56,7 +56,7 @@ dev.off()
 
 ```{r}
 ppi <- 300
-png("images/time_series_example_plot.png", width=6*ppi, height=6*ppi, res=ppi)
+png("time_series_example_plot.png", width=6*ppi, height=6*ppi, res=ppi)
 time_series_long_joined %>% 
   group_by(Country_Region,Date) %>% 
   summarise_at(c("Confirmed", "Deaths"), sum) %>% 
@@ -126,6 +126,6 @@ p <- ggplot(data_time, aes(x = Date,  y = Confirmed, color = Country_Region)) +
       geom_point(aes(group = seq_along(Date))) +
       transition_reveal(Date) 
 # Some people needed to use this line instead
-# animate(p,renderer = gifski_renderer(), end_pause = 15)
-anim_save("deaths_5_countries.gif", p)
+animate(p,renderer = gifski_renderer(), end_pause = 15)
+#anim_save("deaths_5_countries.gif", p)
 ```
