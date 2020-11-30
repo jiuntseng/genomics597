@@ -13,6 +13,7 @@ bibliography: data/references.bib
 * [lab 5x ](Lab5XJiun.html)
 * [lab 6](Lab6-Jiun.html)
 * [lab 7](Lab7Vignette.html)
+* [lab 8](lab8Jiun.html)
 
 Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
 
