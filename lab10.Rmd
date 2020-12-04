@@ -1,0 +1,34 @@
+---
+title: "Lab10"
+author: "Jiun"
+date: "11/30/2020"
+output: html_document
+---
+```{r, echo = TRUE, error = TRUE, message=FALSE}
+#Excercise part 1
+#1)
+?read.vcfR
+#2)
+queryMETA(vcf, element = 'AD')
+#3)
+tail(vcf@fix)
+#4)
+plot(vcf)
+#5)
+colnames(vcf@gt)
+```
+
+```{r, error = TRUE}
+#Excercise part 2
+#1
+plot(getPOS(vcf), myDiff$Gprimest,  pch = 20, col = "#1E90FF44", xlab = "", ylab = "", ylim = c(0, 1), xaxt = "n")
+axis(side = 1, at = seq(0, 1e5, by = 1e4), labels = seq(0, 100, by = 10))
+title(xlab='Genomic position (Kbp)')
+title(ylab = expression(italic("G'"["ST"])))
+#2
+table(pop)
+#3
+chromoqc(chrom, dp.alpha = 66, xlim = c(2e05, 4e05))
+#4
+queryMETA(vcf)
+```
