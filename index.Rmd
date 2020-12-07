@@ -18,6 +18,8 @@ bibliography: data/references.bib
 * [lab 9x](lab-9-B.html)
 * [lab 10](lab10.html)
 * [lab 11](lab11.html)
+* [lab 12](lab12.html)
+* [lab 13](lab13.html)
 
 Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
 
