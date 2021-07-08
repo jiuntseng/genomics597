@@ -2,24 +2,57 @@
 title: "index"
 author: "Jiun"
 date: "8/31/2020"
-output: html_document
+output: 
+    prettydoc::html_pretty:
+    theme: leonids
+    highlight: github
 bibliography: data/references.bib
 ---
-* [lab 1](Lab1-Jiun.html)
-* [lab 2](paper.html)
-* [lab 3](lab-3a-Jiun.html)
-* [lab 4](Lab4Jiun.html)
-* [lab 5](Lab5Jiun.html)
-* [lab 5x ](Lab5XJiun.html)
-* [lab 6](Lab6-Jiun.html)
-* [lab 7](Lab7Vignette.html)
-* [lab 8](lab8Jiun.html)
-* [lab 9](Lab-9-A.html)
-* [lab 9x](lab-9-B.html)
-* [lab 10](lab10.html)
-* [lab 11](lab11.html)
-* [lab 12](lab12.html)
-* [lab 13](lab13.html)
+#Geonomics 579 GE
+### Lab 1
+* [Intro to R & Markdown](Lab1-Jiun.html)
+
+###lab2
+* [Intro to Github & adding references to Markdown](paper.html)
+
+###lab3
+* [Data Wrangling in R](lab-3a-Jiun.html)
+
+###lab4
+* [Working with COVID data in R - Part 1](Lab4Jiun.html)
+
+###lab5
+* [Working with COVID data in R - Part 2](Lab5Jiun.html)
+
+###lab5x
+* [Interactive Graphs and Animations ](Lab5XJiun.html)
+
+###lab6
+* [Data Maps and Interactive Graphs from the COVID-19 reporting data](Lab6-Jiun.html)
+
+###lab7
+* [RNA-Seq Workflow: gene-level exploratory analysis and differential expression](Lab7Vignette.html)
+
+###lab8
+* [Sequence Alignment, Phylogenetic Analysis and Tree Visualization ](lab8Jiun.html)
+
+###lab9
+* [Programming in R - Regular Expressions ](Lab-9-A.html)
+
+###lab9x
+* [Programming in R - Control Structures and Functions](lab-9-B.html)
+
+###lab10
+* [Population genomics based on high throughput sequencing (HTS)](lab10.html)
+
+###lab11
+* [Microbiome Analysis using data2 and phyloseq](lab11.html)
+
+###lab12
+* [Network Analysis using Cytoscape and RCy3](lab12.html)
+
+###lab12
+* [Sprucing up your Rmarkdown and Github Page](lab13.html)
 
 Application written in R [@RCoreTeam] using the Shiny framework [@Chang2015].
 

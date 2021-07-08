@@ -1,0 +1,35 @@
+---
+title: "lab13"
+author: "Jiun"
+date: "12/1/2020"
+output:
+  prettydoc::html_pretty:
+    theme: cayman
+    highlight: github
+---
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+#Basic Data visualization
+knitr::include_graphics("/Users/jiuntseng/Documents/Bio 597 GE/genomics597/basic data visualization.png")
+```
+```{r}
+#Differentially Expressed Genes Network Analysis 
+#STRING net work up regulated genes
+knitr::include_graphics("/Users/jiuntseng/Documents/Bio 597 GE/genomics597/Up-regulated genes.png")
+```
+```{r}
+#STRING protein Query Down-regulated Genes
+knitr::include_graphics("/Users/jiuntseng/Documents/Bio 597 GE/genomics597/Down regulated genes.png")
+```
+```{r}
+#STRING Disease Query 
+knitr::include_graphics("/Users/jiuntseng/Documents/Bio 597 GE/genomics597/Ovarian cancer graph.png")
+```
+```{r}
+#RCy3
+knitr::include_graphics("/Users/jiuntseng/Documents/Bio 597 GE/genomics597/RCy3.png")
+```
+
