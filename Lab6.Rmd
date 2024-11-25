@@ -1,6 +1,6 @@
 ---
-title: "Lab 6 Jiun"
-author: "Jiun"
+title: "Lab 6"
+author: "Jiun Tseng"
 date: "9/28/2020"
 bibliography: /Users/jiuntseng/Documents/Bio 597 GE/genomics597/references.bib
 
